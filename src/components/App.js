@@ -5,10 +5,17 @@ import './../App.css';
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      result: "0"
+    }
+  }
+
   render(){
     return (
-      <div>
-        <Display />
+      <div id="component">
+        <Display result={this.state.result} />
         <ButtonPanel />
       </div>
     );

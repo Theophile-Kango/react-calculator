@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
 
 class Display extends Component{
+
+    constructor(props){
+        super(props);
+    }
+
     render(){
         return(
-            <div>Display</div>
+            <div>{this.props.result}</div>
         )
     }
 }
