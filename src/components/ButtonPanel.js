@@ -10,41 +10,41 @@ class ButtonPanel extends React.Component{
         }
     }
 
-    renderComponent(i){
-        return <Button name={i} />;
+    renderComponent(val){
+        return <Button name={val} />;
     }
 
     render(){
         return(
             <div className="buttons">
                 <div className="group-1">
-                    <Button name={this.renderComponent("AC")} />
-                    <Button name={this.renderComponent("+/-")} />
-                    <Button name={this.renderComponent("%")} />
-                    <Button name={this.renderComponent("÷")} />
+                    {this.renderComponent("AC")}
+                    {this.renderComponent("+/-")}
+                    {this.renderComponent("%")} 
+                    {this.renderComponent("÷")} 
                 </div>
                 <div className="group-2">
-                    <Button name={this.renderComponent("7")} />
-                    <Button name={this.renderComponent("8")} />
-                    <Button name={this.renderComponent("9")} />
-                    <Button name={this.renderComponent("X")} />
+                    {this.renderComponent("7")} 
+                    {this.renderComponent("8")}
+                    {this.renderComponent("9")}
+                    {this.renderComponent("X")}
                 </div>
                 <div className="group-3">
-                    <Button name={this.renderComponent("4")} />
-                    <Button name={this.renderComponent("5")} />
-                    <Button name={this.renderComponent("6")} />
-                    <Button name={this.renderComponent("-")} />
+                    {this.renderComponent("4")} 
+                    {this.renderComponent("5")}
+                    {this.renderComponent("6")}
+                    {this.renderComponent("-")}
                 </div>
                 <div className="group-4">
-                    <Button name={this.renderComponent("1")} />
-                    <Button name={this.renderComponent("2")} />
-                    <Button name={this.renderComponent("3")} />
-                    <Button name={this.renderComponent("+")} />
+                    {this.renderComponent("1")}
+                    {this.renderComponent("2")}
+                    {this.renderComponent("3")}
+                    {this.renderComponent("+")}
                 </div>
                 <div className="group-4">
-                    <Button name={this.renderComponent("0")} />
-                    <Button name={this.renderComponent(".")} />
-                    <Button name={this.renderComponent("=")} />
+                    {this.renderComponent("0")}
+                    {this.renderComponent(".")}
+                    {this.renderComponent("=")}
                 </div>
             </div>
         )
