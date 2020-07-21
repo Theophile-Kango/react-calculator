@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Display extends Component{
-
-    constructor(props){
-        super(props);
-    }
 
     render(){
         return(
@@ -12,5 +9,13 @@ class Display extends Component{
         )
     }
 }
+
+Display.propTypes = {
+    result: PropTypes.string
+};
+
+Display.defaultProps = {
+    result: '0'
+};
 
 export default Display;
