@@ -6,17 +6,23 @@ class ButtonPanel extends React.Component{
     constructor(){
         super();
         this.state = {
-            name: ""
+            name: "",
+            color: this.color,
+            wide: this.wide
         }
     }
 
+
     renderComponent(val){
-        return <Button name={val} />;
+        val === "0" ? this.wide = true : this.wide = false;
+        const operations = ['÷','x','-','+','='];
+        this.color = !operations.includes(val) ? "numerics" : null;
+        return <Button name={val} wide={this.wide} color={this.color} />;
     }
 
     render(){
         return(
-            <div className="buttons">
+            <div className="buttonPanel">
                 <div className="group-1">
                     {this.renderComponent("AC")}
                     {this.renderComponent("+/-")}
@@ -27,7 +33,7 @@ class ButtonPanel extends React.Component{
                     {this.renderComponent("7")} 
                     {this.renderComponent("8")}
                     {this.renderComponent("9")}
-                    {this.renderComponent("X")}
+                    {this.renderComponent("x")}
                 </div>
                 <div className="group-3">
                     {this.renderComponent("4")} 

@@ -20,6 +20,19 @@ body {
       font-size: 40px;
       padding: 25px;
       text-align: right; }
+    body .calculator .buttonPanel div {
+      display: flex;
+      width: 100%;
+      height: 100px; }
+      body .calculator .buttonPanel div button {
+        width: 25%;
+        background: #f5913e;
+        border: 1px solid #858693;
+        font-size: 20px; }
+      body .calculator .buttonPanel div .numerics {
+        background: #e0e0e0; }
+      body .calculator .buttonPanel div #zero {
+        width: 50%; }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
