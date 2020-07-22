@@ -1,20 +1,20 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 
 class App extends Component {
-
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      result: "0"
-    }
+      result: '0',
+    };
   }
 
-  render(){
+  render() {
+    const { result } = this.state;
     return (
       <div id="component" className="calculator">
-        <Display result={this.state.result} />
+        <Display result={result} />
         <ButtonPanel />
       </div>
     );
