@@ -5,6 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .calculator {
+    width: 700px;
+    background: rgb(224, 224, 224);
+    .display{
+      background: rgb(133, 134, 147);
+      color: white;
+      font-weight: bold;
+      height: 100px;
+      box-sizing: border-box;
+      font-size: 40px;
+      padding: 25px;
+      text-align: right;
+    }
+  }
 }
 
 code {
@@ -12,7 +33,3 @@ code {
     monospace;
 }
 
-.calculator {
-  text-align: center;
-  background: red;
-}
