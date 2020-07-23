@@ -17,7 +17,7 @@ describe('calculate function', () => {
    test("If the button is (÷) the result should be the quotient",() => {
         expect(calculate(calculations,"÷")).to.be.eql(Big(1));
    });
-   test('It should divid two numbers and return the quotient', () => {
+   test("If the second number is zero and the operation is ÷, the result should be Infinite", () => {
     expect(calculate({total: "35",operation: "/", next: "0"},"÷")).to.be.eql("Infinite");
    });
    test("If the button is (x) the result should be the product", () => {
