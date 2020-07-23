@@ -16,6 +16,10 @@ describe('operate function', () => {
         expect(operate(firstNumber,"÷",secondNumber)).not.to.be.eql(Big(0.9354));
     });
 
+    test('It should divid two numbers and return the quotient', () => {
+        expect(operate(firstNumber,"÷","0")).to.be.eql("Infinite");
+    });
+
     test('It should multiply two numbers and return the product', () => {
         expect(operate(firstNumber,"x",secondNumber)).to.be.eql(Big(22475));
     });

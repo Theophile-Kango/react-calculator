@@ -1,10 +1,13 @@
 import Big from 'big.js';
 
 const operate = (numberOne, operation, numberTwo) => {
+
+    if((operation === "÷") && (numberTwo === "0")) return "Infinite";
+
     numberOne = new Big(numberOne);
     numberTwo = new Big(numberTwo);
     let result = 0;
-
+    
     switch(operation){
         case "+":
             result = numberOne.plus(numberTwo);
