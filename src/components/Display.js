@@ -1,21 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class Display extends Component{
-
-    render(){
-        return(
-            <div>{this.props.result}</div>
-        )
-    }
+function Display(props) {
+  const { result } = props;
+  return (
+    <div className="display">{result}</div>
+  );
 }
 
 Display.propTypes = {
-    result: PropTypes.string
+  result: PropTypes.string,
 };
 
 Display.defaultProps = {
-    result: '0'
+  result: '0',
 };
 
 export default Display;
