@@ -1,6 +1,9 @@
 import Big from 'big.js';
 
-const operate = (numberOne, operation, numberTwo) => {
+const operate = (...args) => {
+  const operation = args[1];
+  let [numberOne, numberTwo] = [args[0], args[2]];
+
   if ((operation === '÷') && (numberTwo === '0')) return 'Infinite';
 
   numberOne = new Big(numberOne);
@@ -24,6 +27,8 @@ const operate = (numberOne, operation, numberTwo) => {
       numberOne = null;
       result = numberTwo.div(100);
       break;
+    default:
+      return result;
   }
   return result;
 };
