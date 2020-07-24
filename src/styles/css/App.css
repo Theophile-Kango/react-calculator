@@ -7,61 +7,43 @@ body {
   min-height: 100vh;
   width: 100%;
   justify-content: center;
-  align-items: center;
-}
-
-body .calculator {
-  width: 700px;
-  background: #e0e0e0;
-}
-
-body .calculator .display {
-  background: #858693;
-  border: 1px solid #e0e0e0;
-  border-bottom: none;
-  color: white;
-  font-weight: bold;
-  height: 100px;
-  box-sizing: border-box;
-  font-size: 40px;
-  padding: 25px;
-  text-align: right;
-}
-
-body .calculator .buttonPanel {
-  border: 1px solid #e0e0e0;
-}
-
-body .calculator .buttonPanel div {
-  display: flex;
-  width: 100%;
-  height: 100px;
-}
-
-body .calculator .buttonPanel div button {
-  width: 25%;
-  cursor: pointer;
-  background: #f5913e;
-  border: 0.5px solid #858693;
-  font-size: 20px;
-}
-
-body .calculator .buttonPanel div button:hover {
-  background: #f38831;
-}
-
-body .calculator .buttonPanel div .numerics {
-  background: #e0e0e0;
-}
-
-body .calculator .buttonPanel div .numerics:hover {
-  background: lightgray;
-}
-
-body .calculator .buttonPanel div #zero {
-  width: 50%;
-}
+  align-items: center; }
+  body .calculator {
+    width: 700px;
+    background: #e0e0e0; }
+    body .calculator .display {
+      background: #858693;
+      border: 1px solid #e0e0e0;
+      border-bottom: none;
+      color: white;
+      font-weight: bold;
+      height: 100px;
+      box-sizing: border-box;
+      font-size: 40px;
+      padding: 25px;
+      text-align: right; }
+    body .calculator .buttonPanel {
+      border: 1px solid #e0e0e0; }
+      body .calculator .buttonPanel div {
+        display: flex;
+        width: 100%;
+        height: 100px; }
+        body .calculator .buttonPanel div button {
+          width: 25%;
+          cursor: pointer;
+          background: #f5913e;
+          border: 0.5px solid #858693;
+          font-size: 20px; }
+          body .calculator .buttonPanel div button:hover {
+            background: #f38831; }
+        body .calculator .buttonPanel div .numerics {
+          background: #e0e0e0; }
+          body .calculator .buttonPanel div .numerics:hover {
+            background: lightgray; }
+        body .calculator .buttonPanel div #zero {
+          width: 50%; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
+
+/*# sourceMappingURL=App.css.map */

@@ -1,13 +1,20 @@
 /* eslint no-unused-expressions: [2, { allowTernary: true }] */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 class ButtonPanel extends React.Component {
+
   renderComponent(val) {
     val === '0' ? this.wide = true : this.wide = false;
     const operations = ['÷', 'x', '-', '+', '='];
     this.color = !operations.includes(val) ? 'numerics' : null;
-    return <Button name={val} wide={this.wide} color={this.color} />;
+    return <Button 
+      name={val} 
+      wide={this.wide} 
+      color={this.color} 
+      handleClick={this.clickHandler} 
+    />;
   }
 
   render() {
@@ -47,4 +54,11 @@ class ButtonPanel extends React.Component {
   }
 }
 
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
+
+ButtonPanel.defaultProps = {
+  handleClick: PropTypes.func.isRequired
+};
 export default ButtonPanel;
