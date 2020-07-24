@@ -34,8 +34,12 @@ body {
           background: #f5913e;
           border: 0.5px solid #858693;
           font-size: 20px; }
+          body .calculator .buttonPanel div button:hover {
+            background: #f38831; }
         body .calculator .buttonPanel div .numerics {
           background: #e0e0e0; }
+          body .calculator .buttonPanel div .numerics:hover {
+            background: lightgray; }
         body .calculator .buttonPanel div #zero {
           width: 50%; }
 
