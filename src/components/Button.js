@@ -25,7 +25,7 @@ Button.defaultProps = {
   name: '',
   color: '',
   wide: false,
-  handleClick: PropTypes.func.isRequired
+  handleClick: () => {}
 };
 
 export default Button;

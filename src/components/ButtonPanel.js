@@ -59,6 +59,6 @@ ButtonPanel.propTypes = {
 };
 
 ButtonPanel.defaultProps = {
-  handleClick: PropTypes.func.isRequired
+  handleClick: () => {}
 };
 export default ButtonPanel;

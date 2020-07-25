@@ -15,11 +15,9 @@ class App extends Component {
     this.strResult = this.strResult.bind(this);
   }
 
-  handleClick(buttonName){
-    const result = calculate({...this.state},buttonName);
-    this.state({
-      total: result,
-    })
+  handleClick(buttonName) {
+    const calculator = calculate(this.state, buttonName);
+    this.setState(calculator);
   }
 
   strResult() {
