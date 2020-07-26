@@ -10,7 +10,8 @@ class ButtonPanel extends React.Component {
     const operations = ['÷', 'x', '-', '+', '='];
     this.color = !operations.includes(val) ? 'numerics' : null;
     return <Button 
-      name={val} 
+      name={val}
+      key={val} 
       wide={this.wide} 
       color={this.color} 
       handleClick={this.clickHandler} 
@@ -18,36 +19,28 @@ class ButtonPanel extends React.Component {
   }
 
   render() {
+    const group1 = ['AC','+/-','%','÷'];
+    const group2 = ['7','8','9','x'];
+    const group3 = ['4','5','6','-'];
+    const group4 = ['1','2','3','+'];
+    const group5 = ['0','.','='];
+    
     return (
       <div className="buttonPanel">
-        <div className="group-1">
-          {this.renderComponent('AC')}
-          {this.renderComponent('+/-')}
-          {this.renderComponent('%')}
-          {this.renderComponent('÷')}
+        <div>
+          {group1.map(elt => this.renderComponent(elt))}
         </div>
-        <div className="group-2">
-          {this.renderComponent('7')}
-          {this.renderComponent('8')}
-          {this.renderComponent('9')}
-          {this.renderComponent('x')}
+        <div>
+          {group2.map(elt => this.renderComponent(elt))}
         </div>
-        <div className="group-3">
-          {this.renderComponent('4')}
-          {this.renderComponent('5')}
-          {this.renderComponent('6')}
-          {this.renderComponent('-')}
+        <div>
+          {group3.map(elt => this.renderComponent(elt))}
         </div>
-        <div className="group-4">
-          {this.renderComponent('1')}
-          {this.renderComponent('2')}
-          {this.renderComponent('3')}
-          {this.renderComponent('+')}
+        <div>
+          {group4.map(elt => this.renderComponent(elt))}
         </div>
-        <div className="group-4">
-          {this.renderComponent('0')}
-          {this.renderComponent('.')}
-          {this.renderComponent('=')}
+        <div>
+          {group5.map(elt => this.renderComponent(elt))}
         </div>
       </div>
     );
@@ -58,7 +51,4 @@ ButtonPanel.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 };
 
-ButtonPanel.defaultProps = {
-  handleClick: () => {}
-};
 export default ButtonPanel;
