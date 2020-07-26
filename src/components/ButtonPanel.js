@@ -24,24 +24,17 @@ class ButtonPanel extends React.Component {
     const group3 = ['4','5','6','-'];
     const group4 = ['1','2','3','+'];
     const group5 = ['0','.','='];
+    const listGroup = [group1, group2, group3, group4, group5];
     
     return (
       <div className="buttonPanel">
-        <div>
-          {group1.map(elt => this.renderComponent(elt))}
-        </div>
-        <div>
-          {group2.map(elt => this.renderComponent(elt))}
-        </div>
-        <div>
-          {group3.map(elt => this.renderComponent(elt))}
-        </div>
-        <div>
-          {group4.map(elt => this.renderComponent(elt))}
-        </div>
-        <div>
-          {group5.map(elt => this.renderComponent(elt))}
-        </div>
+        {
+          listGroup.map(group => (
+            <div key={group}>
+              {group.map(elt => this.renderComponent(elt))}
+            </div>
+          ))
+        }
       </div>
     );
   }
