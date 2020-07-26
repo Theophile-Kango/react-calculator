@@ -1,8 +1,6 @@
 /* eslint no-unused-expressions: [2, { allowTernary: true }] */
 import React from 'react';
-import PropTypes from 'prop-types';
 import Button from './Button';
-
 class ButtonPanel extends React.Component {
 
   renderComponent(val) {
@@ -14,7 +12,7 @@ class ButtonPanel extends React.Component {
       key={val} 
       wide={this.wide} 
       color={this.color} 
-      handleClick={this.clickHandler} 
+      handleClick={this.handleClick} 
     />;
   }
 
@@ -39,9 +37,5 @@ class ButtonPanel extends React.Component {
     );
   }
 }
-
-ButtonPanel.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
-};
 
 export default ButtonPanel;

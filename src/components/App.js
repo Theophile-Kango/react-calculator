@@ -28,9 +28,9 @@ class App extends Component {
 
   render() {
     return (
-      <div id="component" className="calculator">
+      <div className="calculator">
         <Display result={this.strResult()} />
-        <ButtonPanel clickHandler={this.handleClick} />
+        <ButtonPanel handleClick={this.handleClick} />
       </div>
     );
   }

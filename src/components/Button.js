@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 function Button({ name, color, wide, handleClick }) {
   return (
     <button
@@ -18,7 +17,7 @@ Button.propTypes = {
   name: PropTypes.string,
   color: PropTypes.string,
   wide: PropTypes.bool,
-  handleClick: PropTypes.func.isRequired,
+  handleClick: PropTypes.func,
 };
 
 Button.defaultProps = {
