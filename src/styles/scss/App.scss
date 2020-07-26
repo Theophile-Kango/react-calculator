@@ -54,10 +54,18 @@ body {
           background: rgb(245, 145, 62);
           border: 0.5px solid $grey;
           font-size: 20px;
+
+          &:hover {
+            background: rgb(243, 136, 49);
+          }
         }
 
         .numerics {
           background: $light;
+
+          &:hover {
+            background: lightgray;
+          }
         }
 
         #zero {
