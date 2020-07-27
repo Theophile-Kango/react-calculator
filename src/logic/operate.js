@@ -1,8 +1,8 @@
 import Big from 'big.js';
 
 const operate = (...args) => {
-  const operation = args[1];
-  let [numberOne, numberTwo] = [args[0], args[2]];
+
+  let [numberOne, operation, numberTwo] = args;
 
   if ((operation === '÷') && (numberTwo === '0')) return 'Infinite';
 

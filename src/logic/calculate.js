@@ -7,7 +7,6 @@ const calculate = ({ ...dataObject }, buttonName) => {
 
   if (numericButtons.includes(buttonName)) {
     if (total === null) total = "";
-    if (operation !== null) next = "";
     operation === null ? total += buttonName : next += buttonName;
     return { total, operation, next };
   }
@@ -21,10 +20,16 @@ const calculate = ({ ...dataObject }, buttonName) => {
   }
 
   for (let i = 0; i < operationButtons.length; i += 1) {
-    if ((buttonName === operationButtons[i]) && (next != null)) {
-      operation = buttonName;
-      total = operate(total, operation, next);
-      return { total, operation, next };
+    if ((buttonName === operationButtons[i])) {
+      if(next !== null){
+        operation = buttonName;
+        total = operate(total, operation, next);
+        return { total, operation, next };
+      }else{
+        next = "";
+        operation = buttonName;
+        return { total, operation, next };
+      }
     }
   }
 
@@ -33,10 +38,11 @@ const calculate = ({ ...dataObject }, buttonName) => {
       [total, operation, next] = [null, null, null];
       break;
     case '+/-':
-      operation = buttonName;
+      operation = "+";
       total = operate(total, 'x', '-1');
       break;
     case '=':
+      total = operate(total, operation, next);
       [operation, next] = [null, null];
       break;
     default:

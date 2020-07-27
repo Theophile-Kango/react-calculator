@@ -30,6 +30,7 @@ class App extends Component {
       <div className="calculator">
         <Display result={this.strResult()} />
         <ButtonPanel handleClick={this.handleClick} />
+        {console.log(this.state)}
       </div>
     );
   }

@@ -30,16 +30,16 @@ describe('calculate function', () => {
     expect(calculate(calculations, '%')).to.be.eql({"total":Big(0.35), "next":"35", "operation":"%"});
   });
   test('If the button is (+/-) the result should be multiplyied by -1', () => {
-    expect(calculate(calculations, '+/-')).to.be.eql({"total":Big(-35), "next":"35", "operation":"+/-"});
+    expect(calculate(calculations, '+/-')).to.be.eql({"total":Big(-35), "next":"35", "operation":"+"});
   });
   test('If the button is (AC) the result should be 0', () => {
     expect(calculate(calculations, 'AC')).to.be.eql({"total":null, "operation":null, "next":null});
   });
   test('If the button is (=) the result should be returned', () => {
-    expect(calculate(calculations, '=')).to.be.eql({"total": "35", "operation": null,"next": null});
+    expect(calculate(calculations, '=')).to.be.eql({"next": null, "operation": null, "total": Big(70)});
   });
   test('If the button is (4) the next should containe 4 at the end', () => {
-    expect(calculate(calculations, '4')).to.be.eql({"next": "4", "operation": "+", "total": "35"});
+    expect(calculate(calculations, '4')).to.be.eql({"next": "354", "operation": "+", "total": "35"});
   });
   test("If the button is (.) and the result doesn't containe . ", () => {
     expect(calculate({ total: '4', operation: '-', next: '3' }, '.')).to.be.
