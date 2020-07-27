@@ -23,8 +23,4 @@ describe('operate function', () => {
   test('It should multiply two numbers and return the product', () => {
     expect(operate(firstNumber, 'x', secondNumber)).to.be.eql(Big(22475));
   });
-
-  test('It should calculate the pourcentage of a number', () => {
-    expect(operate(firstNumber, '%', secondNumber)).to.be.eql(Big(1.55));
-  });
 });

@@ -1,5 +1,6 @@
 /* eslint no-unused-expressions: [2, { allowTernary: true }] */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 class ButtonPanel extends React.Component {
@@ -7,44 +8,39 @@ class ButtonPanel extends React.Component {
     val === '0' ? this.wide = true : this.wide = false;
     const operations = ['÷', 'x', '-', '+', '='];
     this.color = !operations.includes(val) ? 'numerics' : null;
-    return <Button name={val} wide={this.wide} color={this.color} />;
+    const { handleClick } = this.props;
+    return (
+      <Button
+        name={val}
+        key={val}
+        wide={this.wide}
+        color={this.color}
+        handleClick={handleClick}
+      />
+    );
   }
 
   render() {
+    const listGroup = [
+      ['AC', '+/-', '%', '÷'], ['7', '8', '9', 'x'], ['4', '5', '6', '-'], ['1', '2', '3', '+'], ['0', '.', '='],
+    ];
+
     return (
       <div className="buttonPanel">
-        <div className="group-1">
-          {this.renderComponent('AC')}
-          {this.renderComponent('+/-')}
-          {this.renderComponent('%')}
-          {this.renderComponent('÷')}
-        </div>
-        <div className="group-2">
-          {this.renderComponent('7')}
-          {this.renderComponent('8')}
-          {this.renderComponent('9')}
-          {this.renderComponent('x')}
-        </div>
-        <div className="group-3">
-          {this.renderComponent('4')}
-          {this.renderComponent('5')}
-          {this.renderComponent('6')}
-          {this.renderComponent('-')}
-        </div>
-        <div className="group-4">
-          {this.renderComponent('1')}
-          {this.renderComponent('2')}
-          {this.renderComponent('3')}
-          {this.renderComponent('+')}
-        </div>
-        <div className="group-4">
-          {this.renderComponent('0')}
-          {this.renderComponent('.')}
-          {this.renderComponent('=')}
-        </div>
+        {
+          listGroup.map(group => (
+            <div key={group}>
+              {group.map(elt => this.renderComponent(elt))}
+            </div>
+          ))
+        }
       </div>
     );
   }
 }
+
+ButtonPanel.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;

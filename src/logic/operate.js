@@ -23,10 +23,6 @@ const operate = (...args) => {
     case '÷':
       result = numberOne.div(numberTwo);
       break;
-    case '%':
-      numberOne = null;
-      result = numberTwo.div(100);
-      break;
     default:
       return result;
   }

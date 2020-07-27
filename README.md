@@ -7,6 +7,10 @@
 Math-magicians is a fictional company based in France. They have requested an help to build a simple product that would assist them with their calculations. 
 They have asked for a product that is not just fully-functional, but also beautiful and user-friendly
 
+# Screenshot
+
+![calculator](https://user-images.githubusercontent.com/49276315/88533143-0e81f300-d006-11ea-8e93-7a339b45a94f.png)
+
 
 ## Live Demo
 
