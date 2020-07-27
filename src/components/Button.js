@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-function Button({ name, color, wide, handleClick }) {
+
+function Button({
+  name, color, wide, handleClick,
+}) {
   return (
     <button
       type="button"
@@ -24,7 +27,6 @@ Button.defaultProps = {
   name: '',
   color: '',
   wide: false,
-  handleClick: () => {}
 };
 
 export default Button;

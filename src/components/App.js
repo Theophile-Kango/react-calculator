@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       total: null,
       operation: null,
-      next: null
+      next: null,
     };
     this.handleClick = this.handleClick.bind(this);
     this.strResult = this.strResult.bind(this);
@@ -30,7 +31,6 @@ class App extends Component {
       <div className="calculator">
         <Display result={this.strResult()} />
         <ButtonPanel handleClick={this.handleClick} />
-        {console.log(this.state)}
       </div>
     );
   }
