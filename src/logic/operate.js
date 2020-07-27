@@ -1,8 +1,8 @@
 import Big from 'big.js';
 
 const operate = (...args) => {
-
-  let [numberOne, operation, numberTwo] = args;
+  const operation = args[1];
+  let [numberOne, numberTwo] = [args[0], args[2]];
 
   if ((operation === '÷') && (numberTwo === '0')) return 'Infinite';
 
@@ -22,10 +22,6 @@ const operate = (...args) => {
       break;
     case '÷':
       result = numberOne.div(numberTwo);
-      break;
-    case '%':
-      numberOne = null;
-      result = numberTwo.div(100);
       break;
     default:
       return result;
