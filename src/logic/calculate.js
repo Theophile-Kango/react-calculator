@@ -17,6 +17,7 @@ const calculate = ({ ...dataObject }, buttonName) => {
   if (buttonName === '.') {
     if (total === null) total = '0';
     if (next === '') next = '0';
+    if (typeof total !== 'string') total = `${total}`;
     if ((!total.includes(buttonName)) || (!next.includes(buttonName))) {
       operation === null ? total += buttonName : next += buttonName;
       return { total, operation, next };
