@@ -8,7 +8,6 @@ const calculate = ({ ...dataObject }, buttonName) => {
 
   if (numericButtons.includes(buttonName)) {
     if (total === null) total = '';
-    // if ((typeof total !== 'string') && (next !== null)) next += buttonName;
     if ((total === '') && operation !== null) total = '0';
     operation === null ? total += buttonName : next += buttonName;
     return { total, operation, next };
