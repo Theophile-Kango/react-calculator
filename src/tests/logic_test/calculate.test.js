@@ -29,7 +29,7 @@ describe('calculate function', () => {
   });
   test('If the button is (+/-) the result should be multiplyied by -1', () => {
     expect(calculate({ total: '35', operation: '+/-', next: '35' }, '+/-'))
-      .to.be.eql({ total: Big(-35), next: null, operation: '' });
+      .to.be.eql({ total: Big(-35), next: null, operation: null });
   });
   test('If the button is (AC) the result should be 0', () => {
     expect(calculate({ total: '35', operation: 'AC', next: '35' }, 'AC'))

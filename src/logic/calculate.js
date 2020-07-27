@@ -8,6 +8,7 @@ const calculate = ({ ...dataObject }, buttonName) => {
 
   if (numericButtons.includes(buttonName)) {
     if (total === null) total = '';
+    // if ((typeof total !== 'string') && (next !== null)) next += buttonName;
     if ((total === '') && operation !== null) total = '0';
     operation === null ? total += buttonName : next += buttonName;
     return { total, operation, next };
@@ -16,7 +17,7 @@ const calculate = ({ ...dataObject }, buttonName) => {
   if (buttonName === '.') {
     if (total === null) total = '0';
     if (next === '') next = '0';
-    if ((!total.split('').includes(buttonName)) || (!next.split('').includes(buttonName))) {
+    if ((!total.includes(buttonName)) || (!next.includes(buttonName))) {
       operation === null ? total += buttonName : next += buttonName;
       return { total, operation, next };
     }
@@ -40,7 +41,7 @@ const calculate = ({ ...dataObject }, buttonName) => {
       [total, operation, next] = [null, null, null];
       break;
     case '+/-':
-      [operation, next] = ['', null];
+      [operation, next] = [null, null];
       total = operate(total, 'x', '-1');
       break;
     case '=':
