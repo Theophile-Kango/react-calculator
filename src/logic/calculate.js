@@ -5,10 +5,9 @@ const calculate = ({ ...dataObject }, buttonName) => {
   const operationButtons = ['+', '-', 'x', '÷', '%'];
   const numericButtons = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-  //if ((operation === null) && (total === null) && (next === null)) total = '0';
-
   if (numericButtons.includes(buttonName)) {
     [operation, next] = [null, null];
+    if (total === null) total = "";
     total += buttonName;
   }
 
@@ -29,7 +28,7 @@ const calculate = ({ ...dataObject }, buttonName) => {
 
   switch (buttonName) {
     case 'AC':
-      [total, operation, next] = ['0', null, null];
+      [total, operation, next] = [null, null, null];
       break;
     case '+/-':
       total = operate(total, 'x', '-1');

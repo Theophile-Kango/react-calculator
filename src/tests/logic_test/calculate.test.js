@@ -30,7 +30,7 @@ describe('calculate function', () => {
     expect(calculate(calculations, '+/-')).to.be.eql(Big(-35));
   });
   test('If the button is (AC) the result should be 0', () => {
-    expect(calculate(calculations, 'AC')).to.be.eql('0');
+    expect(calculate(calculations, 'AC')).to.be.eql(null);
   });
   test('If the button is (=) the result should be returned', () => {
     expect(calculate(calculations, '=')).to.be.eql('35');

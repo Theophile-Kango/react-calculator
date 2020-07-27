@@ -10,7 +10,7 @@ They have asked for a product that is not just fully-functional, but also beauti
 
 ## Live Demo
 
-[Click here](https://react-sample-calculator.herokuapp.com/)
+[Click here](https://reactjs-simple-calculator.netlify.app/)
 
 
 ## Getting Started

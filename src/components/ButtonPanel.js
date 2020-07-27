@@ -12,17 +12,14 @@ class ButtonPanel extends React.Component {
       key={val} 
       wide={this.wide} 
       color={this.color} 
-      handleClick={this.handleClick} 
+      handleClick={this.props.handleClick} 
     />;
   }
 
   render() {
-    const group1 = ['AC','+/-','%','÷'];
-    const group2 = ['7','8','9','x'];
-    const group3 = ['4','5','6','-'];
-    const group4 = ['1','2','3','+'];
-    const group5 = ['0','.','='];
-    const listGroup = [group1, group2, group3, group4, group5];
+    const listGroup = [
+      ['AC','+/-','%','÷'], ['7','8','9','x'], ['4','5','6','-'], ['1','2','3','+'], ['0','.','=']
+    ];
     
     return (
       <div className="buttonPanel">
@@ -37,5 +34,7 @@ class ButtonPanel extends React.Component {
     );
   }
 }
+
+
 
 export default ButtonPanel;
