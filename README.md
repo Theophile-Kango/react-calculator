@@ -26,7 +26,7 @@ They have asked for a product that is not just fully-functional, but also beauti
 ## Built With
 
 - Reactjs
-And deploy to heroku
+And deploy to netlify
 
 ### Setup
 
